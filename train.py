@@ -19,6 +19,7 @@ def get_dataloaders():
         transforms.RandomHorizontalFlip(),
         transforms.ToTensor(),
         transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2470, 0.2435, 0.2616)),
+        transforms.RandomErasing(p=0.5),
     ])
     test_transform = transforms.Compose([
         transforms.ToTensor(),
